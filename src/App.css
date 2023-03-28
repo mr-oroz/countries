@@ -1,0 +1,104 @@
+header {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.add-test,
+.list-test {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.add-test button {
+  width: 50%;
+  align-self: center;
+}
+
+.left,
+.list,
+.right,
+.variants,
+.tests {
+  display: flex;
+  flex-direction: column;
+}
+
+.left,
+.list {
+  gap: 10px;
+}
+
+.item {
+  background-color: aqua;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item span {
+  cursor: pointer;
+}
+
+.right {
+  background-color: crimson;
+  padding: 15px;
+}
+
+.variants,
+.right,
+.tests  {
+  gap: 20px;
+}
+
+.test {
+  background-color: aqua;
+  padding: 15px;
+}
+
+.modal {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal_black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+  z-index: 1;
+}
+.modal_body {
+  width: 250px;
+  height: 200px;
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 15px;
+  z-index: 3;
+}
