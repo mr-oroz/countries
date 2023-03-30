@@ -1,35 +1,15 @@
 
-
-export const addTestAction = (object) => {
+export const countryAllAction = (data) => {
     return {
-        type: "ADD_TEST",
-        payload: object
+        type: 'LOAD_ALL_COUNTRY',
+        payload: data //response data
     }
 }
 
-export const deleteTestAction = (id) => {
+export const itemDetailAction = (data, errorMessage) => {
     return {
-        type: "DELETE_TEST",
-        id
-    }
-}
-
-export const checkScoreAction = (bool) => { 
-    return {
-        type: 'TOTAL_SCORE',
-        payload: bool // true || false 
-    }
-}
-
-export const modalAction = (bool) => {
-    return {
-        type: 'MODAL_COMPONENT',
-        payload: bool
-    }
-}
-
-export const removeState = () => {
-    return {
-        type: 'REMOVE_STATE',
+        type: "LOAD_ITEM",
+        payload: data, //response data || {}
+        errorMessage // e.response.data.message - 404 not found || null
     }
 }

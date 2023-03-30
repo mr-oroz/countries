@@ -1,12 +1,26 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-    // npm i react-redux redux react-router-dom --save
+    const [value, setValue] = useState('');
+    const navigate = useNavigate();
+    
+    const handleClick = () => {
+        navigate(`/detail/${value}`)
+        setValue('')
+    }
     return (
-        <header className='header'>
-            <Link to='/'>Add Test</Link>
-            <Link to='/pass-test'>Pass the Test</Link>
+        <header>
+            <Link to={'/'}>Home</Link>
+            <div className='search'>
+                <input
+                    onChange={(e) => setValue(e.target.value)}
+                    value={value}
+                    placeholder='search'
+                    type="text" />
+                <button onClick={handleClick}>search</button>
+            </div>
         </header>
     );
 };
